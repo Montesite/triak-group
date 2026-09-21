@@ -759,9 +759,9 @@
     }
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 52px;
-      align-items: start;
+      grid-template-columns: 1fr;
+      max-width: 620px;
+      margin: 0 auto;
     }
     .contact-info .section-tag { margin-left: 0; }
     .contact-info .section-title { text-align: left; font-size: 1.8rem; margin-bottom: 34px; }
@@ -809,13 +809,6 @@
     }
     .social-btn:hover { background: var(--navy-light); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
     .social-btn svg { width: 17px; height: 17px; fill: var(--gold); }
-    .contact-map {
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
-      height: 420px;
-      border: 1px solid var(--gray-200);
-    }
-    .contact-map iframe { width: 100%; height: 100%; border: none; border-radius: var(--radius); }
 
     /* ===== FOOTER ===== */
     footer {
@@ -954,9 +947,6 @@
       }
       .svc-features { justify-content: center; }
 
-      /* Contato */
-      .contact-grid { grid-template-columns: 1fr; }
-      .contact-map { height: 340px; }
 
       /* Vitrine banner */
       .vitrine-banner {
@@ -1059,7 +1049,6 @@
       .svc-feature { font-size: 0.74rem; }
 
       /* Contato */
-      .contact-map { height: 260px; }
       .contact-socials { flex-direction: column; }
       .social-btn { justify-content: center; }
       .ci-icon { width: 40px; height: 40px; }
@@ -1207,8 +1196,6 @@
     .about-card.reveal.visible   { transform: translateX(0); }
     .about-content.reveal        { transform: translateX(40px); }
     .about-content.reveal.visible{ transform: translateX(0); }
-    .contact-map.reveal          { transform: translateX(40px); }
-    .contact-map.reveal.visible  { transform: translateX(0); }
 
     /* --- Cursor de digitação --- */
     .typing-cursor {
@@ -1545,16 +1532,6 @@
           <div class="contact-items">
             <div class="contact-item reveal">
               <div class="ci-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              </div>
-              <div>
-                <div class="ci-label" data-pt="Endereço" data-en="Address">Endereço</div>
-                <div class="ci-value">Rua Cacequi, 206 — Rio de Janeiro, RJ</div>
-              </div>
-            </div>
-
-            <div class="contact-item reveal reveal-d1">
-              <div class="ci-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </div>
               <div>
@@ -1594,17 +1571,6 @@
               Instagram
             </a>
           </div>
-        </div>
-
-        <!-- Mapa -->
-        <div class="contact-map reveal reveal-d1">
-          <iframe
-            src="https://maps.google.com/maps?q=Rua+Cacequi+206+Rio+de+Janeiro+RJ+Brasil&output=embed&hl=pt-BR"
-            title="Localização da Triak Group — Rua Cacequi, 206, Rio de Janeiro"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
         </div>
 
       </div>
